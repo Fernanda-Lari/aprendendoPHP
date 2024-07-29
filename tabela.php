@@ -31,8 +31,8 @@ $cols = 1;
     </style>
      <style>
         .gallery img {
-            width: 100px;
-            height: 100px;
+            width: 250px;
+            height: 250px;
             margin: 1px
         }
         .gallery {
