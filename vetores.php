@@ -24,6 +24,28 @@
     //Começa a contar do 0
     echo $carros[1], "<br>";
     echo $carros[3], "<br>";
+
+//adicionando novos elementos 
+    $carros[4] = "Camaro ss 67";
+    $carros[11] = "Opala comodoro";
+    $carros [] = "Ford f150";
+    echo $carros[4] , "<br>"; 
+    echo $carros[5] , "<br>"; 
+    echo $carros[12] , "<br>"; 
+
+    //usando string como indice
+    $carros['cd'] = "Commander";
+    echo $carros['cd'] , "<br>";
+
+    echo "<h1> Impressão completa da Array </h1>";
+
+    echo "<pre>";
+    print_r($carros);
+    echo "</pre>";
+
+    echo "<pre>";
+    var_dump($carros);
+    echo "</pre>";
     ?> 
     
 </body>
