@@ -3,32 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IMC</title>
+    <link rel="stylesheet" href="aula11.css"/>
 </head>
 <body>
-    <?php
+<?php
     $peso = $_POST["peso"];
     $altura = $_POST["altura"];
-    $classificacao = $peso/($altura*$altura);
-    echo "seu IMC é: ", $classificacao;
-{
+    $resultado = $peso / ($altura*$altura);
 
-{
-            if ($imc < 18.5) {
-                $classificacao = "Abaixo do peso";
-            } elseif ($imc < 24.9) {
-                $classificacao = "Peso normal";
-            } elseif ($imc < 29.9) {
-                $classificacao = "Sobrepeso";
-            } else {
-                $classificacao = "Obesidade";
-            }
-
-        }
+    if ($resultado < 18.5) {
+        echo "<h1>Seu IMC é $resultado. Você está abaixo do peso ideal.</h1>";
+    } else if ($resultado >= 18.5 && $resultado < 24.9) {
+        echo "<h1>Seu IMC é $resultado. Seu peso está dentro da faixa saudável.</h1>";
+    } else if ($resultado >= 25 && $resultado < 29.9) {
+        echo "<h1>Seu IMC é $resultado. Você está com sobrepeso.</h1>";
+    } else {
+        echo "<h1>Seu IMC é $resultado. Você está com obesidade.</h1>";
     }
-    header("Location: aula11.php?res=$classificacao");
     ?>
-
-    ?>
+    <img src="https://image.freepik.com/free-vector/lose-weight-design_24877-16798.jpg">
 </body>
-</html>     
+</html>
